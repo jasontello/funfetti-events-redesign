@@ -9,7 +9,7 @@
       (() => {
         let introSeen = false;
         try {
-          introSeen = sessionStorage.getItem('funfetti-intro-seen') === 'true';
+          introSeen = sessionStorage.getItem('funfetti-intro-seen-v2') === 'true';
         } catch (_) {}
         if (!introSeen && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
           document.documentElement.classList.add('intro-pending');
@@ -19,14 +19,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <script type="module" crossorigin src="./assets/index-C-IdPguw.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-D0ft8YIx.css">
+    <script type="module" crossorigin src="./assets/index-Kc98GxOt.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DpU1Mffd.css">
   </head>
   <body>
     <div class="site-intro" role="dialog" aria-modal="true" aria-labelledby="intro-title">
       <video class="site-intro-video" poster="./assets/hero-illustration-v3-CvcQ_Up7.png" muted playsinline preload="auto" aria-hidden="true">
-        <source src="./assets/hero-intro-CzZhPlrT.webm" type="video/webm" media="(min-width: 761px)" />
-        <source src="./assets/hero-intro-DOpjubvm.mp4" type="video/mp4" media="(min-width: 761px)" />
+        <source src="./assets/hero-intro-DbM7xrJQ.webm" type="video/webm" media="(min-width: 761px)" />
+        <source src="./assets/hero-intro-D6IlHA2B.mp4" type="video/mp4" media="(min-width: 761px)" />
       </video>
       <div class="site-intro-content">
         <h1 id="intro-title" aria-label="Make Your Next Event Unforgettable">
