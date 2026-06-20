@@ -114,8 +114,8 @@ h1, h2, h3 { font-family: "DM Serif Display", Georgia, serif; font-weight: 400; 
 }
 .intro-skip:hover { background: white; }
 .intro-skip:focus-visible { outline: 3px solid #275bb5; outline-offset: 3px; }
-.intro-pending .site-header { position: fixed; opacity: 0; translate: 0 -14px; animation: intro-header-in .55s cubic-bezier(.22, 1, .36, 1) .25s forwards; }
-.intro-finishing .site-header { position: fixed; opacity: 1; translate: 0 0; }
+.intro-pending .site-header { position: fixed; opacity: 0; visibility: hidden; pointer-events: none; translate: 0 -14px; }
+.intro-finishing .site-header { position: fixed; opacity: 0; visibility: visible; pointer-events: none; translate: 0 -14px; animation: intro-header-in .55s cubic-bezier(.22, 1, .36, 1) .08s forwards; }
 .intro-pending .site-content { opacity: 0; visibility: hidden; pointer-events: none; }
 .intro-finishing .site-intro { pointer-events: none; animation: intro-overlay-out .65s cubic-bezier(.4, 0, .2, 1) forwards; }
 .intro-finishing .site-content { opacity: 0; animation: intro-content-in .65s cubic-bezier(.22, 1, .36, 1) forwards; }

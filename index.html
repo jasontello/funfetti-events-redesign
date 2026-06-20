@@ -9,7 +9,7 @@
       (() => {
         let introSeen = false;
         try {
-          introSeen = sessionStorage.getItem('funfetti-intro-seen') === 'true';
+          introSeen = sessionStorage.getItem('funfetti-intro-seen-v2') === 'true';
         } catch (_) {}
         if (!introSeen && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
           document.documentElement.classList.add('intro-pending');
