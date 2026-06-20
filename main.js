@@ -49,3 +49,41 @@ cookieButton.addEventListener('click', () => {
   localStorage.setItem('funfetti-cookie-notice', 'accepted');
   cookieBanner.hidden = true;
 });
+
+const galleryButtons = [...document.querySelectorAll('.gallery-open')];
+const lightbox = document.querySelector('.lightbox');
+const lightboxImage = document.querySelector('.lightbox-image');
+const lightboxCaption = document.querySelector('.lightbox-caption');
+const lightboxClose = document.querySelector('.lightbox-close');
+const lightboxPrevious = document.querySelector('.lightbox-prev');
+const lightboxNext = document.querySelector('.lightbox-next');
+let activeGalleryIndex = 0;
+
+const showGalleryImage = (index) => {
+  activeGalleryIndex = (index + galleryButtons.length) % galleryButtons.length;
+  const sourceImage = galleryButtons[activeGalleryIndex].querySelector('img');
+  lightboxImage.src = sourceImage.src;
+  lightboxImage.alt = sourceImage.alt;
+  lightboxCaption.textContent = sourceImage.alt;
+};
+
+galleryButtons.forEach((button, index) => {
+  button.addEventListener('click', () => {
+    showGalleryImage(index);
+    lightbox.showModal();
+  });
+});
+
+lightboxClose.addEventListener('click', () => lightbox.close());
+lightboxPrevious.addEventListener('click', () => showGalleryImage(activeGalleryIndex - 1));
+lightboxNext.addEventListener('click', () => showGalleryImage(activeGalleryIndex + 1));
+
+lightbox.addEventListener('click', (event) => {
+  if (event.target === lightbox) lightbox.close();
+});
+
+document.addEventListener('keydown', (event) => {
+  if (!lightbox.open) return;
+  if (event.key === 'ArrowLeft') showGalleryImage(activeGalleryIndex - 1);
+  if (event.key === 'ArrowRight') showGalleryImage(activeGalleryIndex + 1);
+});

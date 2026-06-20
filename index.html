@@ -41,7 +41,13 @@
     <main id="home">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-content">
-          <h1 id="hero-title">Make Your Next Event Unforgettable</h1>
+          <h1 id="hero-title" aria-label="Make Your Next Event Unforgettable">
+            <span class="hero-word" style="--word-delay: .12s">Make</span>
+            <span class="hero-word" style="--word-delay: .3s">Your</span>
+            <span class="hero-word" style="--word-delay: .48s">Next</span>
+            <span class="hero-word" style="--word-delay: .66s">Event</span>
+            <span class="hero-word hero-word-accent" style="--word-delay: .94s"><span>Unforgettable</span></span>
+          </h1>
         </div>
       </section>
 
@@ -74,10 +80,10 @@
         <svg class="party-doodle doodle-burst doodle-gallery" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4v16M32 44v16M4 32h16M44 32h16M12 12l11 11M41 41l11 11M52 12 41 23M23 41 12 52" /></svg>
         <h2 class="script-heading" id="gallery-title">Colorful Celebrations Gallery</h2>
         <div class="gallery-grid">
-          <figure class="gallery-tall"><img src="/assets/gallery-1.png" alt="Elegant balloon and event backdrop" /></figure>
-          <figure><img src="/assets/gallery-2.png" alt="Colorful celebration setup" /></figure>
-          <figure><img src="/assets/rentals.png" alt="Party tables and balloon decorations" /></figure>
-          <figure><img src="/assets/photobooth.png" alt="Pink party photo booth" /></figure>
+          <figure class="gallery-tall"><button class="gallery-open" type="button" aria-label="View elegant balloon and event backdrop"><img src="/assets/gallery-1.png" alt="Elegant balloon and event backdrop" /></button></figure>
+          <figure><button class="gallery-open" type="button" aria-label="View colorful celebration setup"><img src="/assets/gallery-2.png" alt="Colorful celebration setup" /></button></figure>
+          <figure><button class="gallery-open" type="button" aria-label="View party tables and balloon decorations"><img src="/assets/rentals.png" alt="Party tables and balloon decorations" /></button></figure>
+          <figure><button class="gallery-open" type="button" aria-label="View pink party photo booth"><img src="/assets/photobooth.png" alt="Pink party photo booth" /></button></figure>
         </div>
       </section>
 
@@ -134,6 +140,22 @@
         </div>
       </section>
     </main>
+
+    <dialog class="lightbox" aria-label="Gallery image viewer">
+      <button class="lightbox-close" type="button" aria-label="Close image viewer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5 5 19" /></svg>
+      </button>
+      <button class="lightbox-nav lightbox-prev" type="button" aria-label="View previous image">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7" /></svg>
+      </button>
+      <figure class="lightbox-figure">
+        <img class="lightbox-image" src="" alt="" />
+        <figcaption class="lightbox-caption"></figcaption>
+      </figure>
+      <button class="lightbox-nav lightbox-next" type="button" aria-label="View next image">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7" /></svg>
+      </button>
+    </dialog>
 
     <footer>
       <p>Copyright © 2026 Funfetti Event Planning and Party Rentals. All Rights Reserved.</p>
