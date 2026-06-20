@@ -5,12 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Funfetti Events event planning and party rentals." />
     <title>Funfetti Event Planning and Party Rentals</title>
+    <script>
+      (() => {
+        let introSeen = false;
+        try {
+          introSeen = sessionStorage.getItem('funfetti-intro-seen') === 'true';
+        } catch (_) {}
+        if (!introSeen && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          document.documentElement.classList.add('intro-pending');
+        }
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
+    <div class="site-intro" role="dialog" aria-modal="true" aria-labelledby="intro-title">
+      <video class="site-intro-video" poster="/assets/hero-illustration-v3.png" muted playsinline preload="auto" aria-hidden="true">
+        <source src="/assets/hero-intro.webm" type="video/webm" media="(min-width: 761px)" />
+        <source src="/assets/hero-intro.mp4" type="video/mp4" media="(min-width: 761px)" />
+      </video>
+      <div class="site-intro-content">
+        <h1 id="intro-title" aria-label="Make Your Next Event Unforgettable">
+          <span class="intro-word" style="--intro-delay: .5s">Make</span>
+          <span class="intro-word" style="--intro-delay: .7s">Your</span>
+          <span class="intro-word" style="--intro-delay: .9s">Next</span>
+          <span class="intro-word" style="--intro-delay: 1.1s">Event</span>
+          <span class="intro-word intro-word-accent" style="--intro-delay: 1.34s"><span>Unforgettable</span></span>
+        </h1>
+      </div>
+      <button class="intro-skip" type="button">Skip intro</button>
+    </div>
+
     <header class="site-header">
       <a class="brand" href="#home" aria-label="Funfetti Events home">
         <img src="/assets/logo.png" alt="Funfetti Events" />
@@ -38,10 +66,11 @@
       </nav>
     </header>
 
+    <div class="site-content">
     <main id="home">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-content">
-          <h1 id="hero-title" aria-label="Make Your Next Event Unforgettable">
+          <h1 id="hero-title" tabindex="-1" aria-label="Make Your Next Event Unforgettable">
             <span class="hero-word" style="--word-delay: .12s">Make</span>
             <span class="hero-word" style="--word-delay: .3s">Your</span>
             <span class="hero-word" style="--word-delay: .48s">Next</span>
@@ -166,6 +195,7 @@
       <div><strong>This website uses cookies.</strong><p>We use cookies to analyze website traffic and optimize your website experience.</p></div>
       <button type="button" class="cookie-accept">Accept</button>
     </aside>
+    </div>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
