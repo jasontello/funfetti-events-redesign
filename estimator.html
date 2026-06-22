@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Estimate tables, chairs, and a planning-range rental subtotal for your Funfetti event." />
+    <title>Event Rental Estimator | Funfetti Events</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/estimator.css" />
+  </head>
+  <body class="estimator-page">
+    <header class="site-header estimator-header">
+      <a class="brand" href="./index.html" aria-label="Funfetti Events home">
+        <img src="/assets/logo.png" alt="Funfetti Events" />
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span><span class="sr-only">Open menu</span>
+      </button>
+      <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+        <a class="nav-link" href="./index.html#about">About</a>
+        <a class="nav-link" href="./index.html#services">Services</a>
+        <a class="nav-link nav-link-active" href="./estimator.html" aria-current="page">Estimator</a>
+        <a class="nav-link" href="./index.html#work">Gallery</a>
+        <a class="nav-link" href="./index.html#contact">Contact</a>
+        <a class="nav-link" href="https://funfettievents.booqableshop.com/" target="_blank" rel="noreferrer">Inventory</a>
+      </nav>
+    </header>
+
+    <main class="estimator-main">
+      <section class="estimator-hero" aria-labelledby="estimator-title">
+        <svg class="party-doodle estimator-doodle-left" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4v16M32 44v16M4 32h16M44 32h16M12 12l11 11M41 41l11 11M52 12 41 23M23 41 12 52" /></svg>
+        <svg class="party-doodle estimator-doodle-right" viewBox="0 0 90 42" aria-hidden="true"><path d="M4 27c9-22 18 22 27 0s18 22 27 0 18 22 28 0" /></svg>
+        <h1 id="estimator-title">Plan Your Event With Confidence</h1>
+        <p>Enter a few details to estimate your table setup, chair quantity, and a planning-range rental subtotal.</p>
+      </section>
+
+      <section class="estimator-experience" aria-label="Event rental estimator">
+        <div class="estimator-mode-switcher">
+          <span id="mode-description">Prefer to enter everything at once?</span>
+          <button id="mode-toggle" type="button" aria-controls="walkthrough-mode manual-mode" aria-describedby="mode-description">Enter Manually</button>
+        </div>
+
+        <section id="walkthrough-mode" class="walkthrough-mode" aria-label="Guided event estimator">
+          <div class="walkthrough-header">
+            <button id="walkthrough-back" class="walkthrough-back" type="button" hidden>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7" /></svg>
+              Back
+            </button>
+            <div class="walkthrough-progress" aria-label="Walkthrough progress">
+              <span>Step <strong id="walkthrough-step-number">1</strong> of 4</span>
+              <div class="walkthrough-progress-track" aria-hidden="true"><span id="walkthrough-progress-fill"></span></div>
+            </div>
+          </div>
+
+          <form id="walkthrough-form" novalidate>
+            <div class="walkthrough-stage">
+              <aside id="walkthrough-visual" class="walkthrough-visual" hidden>
+                <img id="walkthrough-visual-image" src="/assets/walkthrough-wedding.jpg" alt="" />
+                <p id="walkthrough-visual-label">Wedding or reception</p>
+              </aside>
+
+              <div class="walkthrough-steps">
+                <section class="walkthrough-step is-active event-step" data-step="1" aria-labelledby="walkthrough-question-1">
+                  <div class="walkthrough-question">
+                    <h2 id="walkthrough-question-1" tabindex="-1">What Are You Celebrating?</h2>
+                    <p>Choose the event that feels closest. You can adjust it later.</p>
+                  </div>
+                  <div class="event-choice-grid">
+                    <label class="event-choice">
+                      <input type="radio" name="guidedEvent" value="Wedding or reception" data-image="/assets/walkthrough-wedding.jpg" checked />
+                      <span><img src="/assets/walkthrough-wedding.jpg" alt="" /><strong>Wedding or Reception</strong></span>
+                    </label>
+                    <label class="event-choice">
+                      <input type="radio" name="guidedEvent" value="Birthday party" data-image="/assets/walkthrough-birthday.jpg" />
+                      <span><img src="/assets/walkthrough-birthday.jpg" alt="" /><strong>Birthday Party</strong></span>
+                    </label>
+                    <label class="event-choice">
+                      <input type="radio" name="guidedEvent" value="Corporate event" data-image="/assets/walkthrough-corporate.jpg" />
+                      <span><img src="/assets/walkthrough-corporate.jpg" alt="" /><strong>Corporate Event</strong></span>
+                    </label>
+                    <label class="event-choice">
+                      <input type="radio" name="guidedEvent" value="Baby or bridal shower" data-image="/assets/walkthrough-shower.jpg" />
+                      <span><img src="/assets/walkthrough-shower.jpg" alt="" /><strong>Baby or Bridal Shower</strong></span>
+                    </label>
+                    <label class="event-choice">
+                      <input type="radio" name="guidedEvent" value="Graduation celebration" data-image="/assets/walkthrough-graduation.jpg" />
+                      <span><img src="/assets/walkthrough-graduation.jpg" alt="" /><strong>Graduation</strong></span>
+                    </label>
+                    <label class="event-choice">
+                      <input type="radio" name="guidedEvent" value="Other celebration" data-image="/assets/walkthrough-other.jpg" />
+                      <span><img src="/assets/walkthrough-other.jpg" alt="" /><strong>Other Celebration</strong></span>
+                    </label>
+                  </div>
+                  <button class="walkthrough-next" type="button" data-next-step>Continue</button>
+                </section>
+
+                <section class="walkthrough-step" data-step="2" aria-labelledby="walkthrough-question-2" hidden>
+                  <div class="walkthrough-question">
+                    <h2 id="walkthrough-question-2" tabindex="-1">How Many Guests Are Coming?</h2>
+                    <p>An approximate count is perfect for planning.</p>
+                  </div>
+                  <label class="guided-number-field" for="guided-guest-count">
+                    <span>Expected guests</span>
+                    <input id="guided-guest-count" type="number" min="1" max="500" step="1" value="50" inputmode="numeric" />
+                  </label>
+                  <div class="quick-choice-row" aria-label="Quick guest-count choices">
+                    <button type="button" data-guest-count="25">25</button>
+                    <button type="button" data-guest-count="50">50</button>
+                    <button type="button" data-guest-count="100">100</button>
+                    <button type="button" data-guest-count="150">150</button>
+                  </div>
+                  <p id="guided-guest-error" class="walkthrough-error" role="alert" hidden>Please enter between 1 and 500 guests.</p>
+                  <button class="walkthrough-next" type="button" data-next-step>Continue</button>
+                </section>
+
+                <section class="walkthrough-step" data-step="3" aria-labelledby="walkthrough-question-3" hidden>
+                  <div class="walkthrough-question">
+                    <h2 id="walkthrough-question-3" tabindex="-1">How Would You Like Guests Seated?</h2>
+                    <p>We’ll use this to estimate the number of guest tables.</p>
+                  </div>
+                  <div class="guided-option-list">
+                    <label><input type="radio" name="guidedTableStyle" value="round" checked /><span><strong>Round tables</strong><small>8 guests per table</small></span></label>
+                    <label><input type="radio" name="guidedTableStyle" value="rectangle6" /><span><strong>6-foot rectangular tables</strong><small>8 guests per table</small></span></label>
+                    <label><input type="radio" name="guidedTableStyle" value="rectangle8" /><span><strong>8-foot rectangular tables</strong><small>10 guests per table</small></span></label>
+                  </div>
+                  <button class="walkthrough-next" type="button" data-next-step>Continue</button>
+                </section>
+
+                <section class="walkthrough-step" data-step="4" aria-labelledby="walkthrough-question-4" hidden>
+                  <div class="walkthrough-question">
+                    <h2 id="walkthrough-question-4" tabindex="-1">Add the Finishing Details</h2>
+                    <p>Include service tables and a few extra chairs if you’d like a buffer.</p>
+                  </div>
+                  <label class="guided-number-field" for="guided-extra-tables">
+                    <span>Tables for food, gifts, cake, or vendors</span>
+                    <input id="guided-extra-tables" type="number" min="0" max="12" step="1" value="2" inputmode="numeric" />
+                  </label>
+                  <fieldset class="guided-buffer-options">
+                    <legend>Extra-chair buffer</legend>
+                    <label><input type="radio" name="guidedChairBuffer" value="0" /><span>None</span></label>
+                    <label><input type="radio" name="guidedChairBuffer" value="5" checked /><span>5%</span></label>
+                    <label><input type="radio" name="guidedChairBuffer" value="10" /><span>10%</span></label>
+                  </fieldset>
+                  <button class="walkthrough-next" type="button" data-show-results>See My Estimate</button>
+                </section>
+
+                <section class="walkthrough-step walkthrough-complete" data-step="5" aria-labelledby="walkthrough-complete-title" hidden>
+                  <div class="walkthrough-question">
+                    <h2 id="walkthrough-complete-title" tabindex="-1">Your Event Plan Is Ready</h2>
+                    <p id="walkthrough-summary-label">Wedding or reception for 50 guests</p>
+                  </div>
+                  <div class="walkthrough-total"><span>Planning-range subtotal</span><strong id="walkthrough-total">$0–$0</strong></div>
+                  <dl class="walkthrough-summary-grid">
+                    <div><dt>Guest tables</dt><dd id="walkthrough-guest-tables">0</dd></div>
+                    <div><dt>Service tables</dt><dd id="walkthrough-service-tables">0</dd></div>
+                    <div><dt>Recommended chairs</dt><dd id="walkthrough-chairs">0</dd></div>
+                    <div><dt>20-chair packs</dt><dd id="walkthrough-chair-packs">0</dd></div>
+                  </dl>
+                  <p class="walkthrough-disclaimer">This is a planning estimate. Delivery, setup, taxes, availability, and event-specific needs are not included.</p>
+                  <div class="walkthrough-complete-actions">
+                    <a id="walkthrough-quote-link" class="quote-button" href="mailto:Events@funfettievents.com">Request an Exact Quote</a>
+                    <button id="fine-tune-manually" class="walkthrough-secondary" type="button">Fine-Tune Manually</button>
+                    <button id="restart-walkthrough" class="walkthrough-secondary" type="button">Start Over</button>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </form>
+        </section>
+
+        <section id="manual-mode" class="estimator-workspace" aria-label="Manual event rental estimator" hidden>
+        <form id="estimator-form" class="estimator-form" novalidate>
+          <div class="estimator-form-heading">
+            <h2>Tell Us About Your Event</h2>
+            <p>Adjust any answer and your estimate will update automatically.</p>
+          </div>
+
+          <div class="form-field">
+            <label for="event-type">Event type</label>
+            <select id="event-type" name="eventType">
+              <option value="Wedding or reception">Wedding or reception</option>
+              <option value="Birthday party">Birthday party</option>
+              <option value="Corporate event">Corporate event</option>
+              <option value="Baby or bridal shower">Baby or bridal shower</option>
+              <option value="Graduation celebration">Graduation celebration</option>
+              <option value="Other celebration">Other celebration</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="guest-count">How many guests are you expecting?</label>
+            <input id="guest-count" name="guestCount" type="number" min="1" max="500" step="1" value="50" inputmode="numeric" aria-describedby="guest-count-help guest-count-error" required />
+            <p class="field-help" id="guest-count-help">Enter between 1 and 500 guests.</p>
+            <p class="field-error" id="guest-count-error" role="alert" hidden>Please enter a guest count between 1 and 500.</p>
+          </div>
+
+          <fieldset class="form-field table-style-field">
+            <legend>Choose a table style</legend>
+            <div class="table-options">
+              <label class="table-option">
+                <input type="radio" name="tableStyle" value="round" checked />
+                <span><strong>Round</strong><small>8 guests per table</small></span>
+              </label>
+              <label class="table-option">
+                <input type="radio" name="tableStyle" value="rectangle6" />
+                <span><strong>6-foot rectangle</strong><small>8 guests per table</small></span>
+              </label>
+              <label class="table-option">
+                <input type="radio" name="tableStyle" value="rectangle8" />
+                <span><strong>8-foot rectangle</strong><small>10 guests per table</small></span>
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="extra-tables">Additional service tables</label>
+              <input id="extra-tables" name="extraTables" type="number" min="0" max="12" step="1" value="2" inputmode="numeric" />
+              <p class="field-help">For food, gifts, cake, or vendors.</p>
+            </div>
+            <div class="form-field">
+              <label for="chair-buffer">Extra-chair buffer</label>
+              <select id="chair-buffer" name="chairBuffer">
+                <option value="0">No additional chairs</option>
+                <option value="5" selected>5% buffer</option>
+                <option value="10">10% buffer</option>
+              </select>
+            </div>
+          </div>
+
+          <button class="calculate-button" type="submit">Update Estimate</button>
+        </form>
+
+        <aside class="estimator-results" aria-labelledby="results-title" aria-live="polite">
+          <div class="results-heading">
+            <h2 id="results-title">Your Planning Estimate</h2>
+            <p id="results-event-type">Wedding or reception for 50 guests</p>
+          </div>
+
+          <div class="results-total">
+            <span>Estimated rental subtotal</span>
+            <strong id="estimated-cost">$0–$0</strong>
+          </div>
+
+          <dl class="results-grid">
+            <div><dt>Guest tables</dt><dd id="guest-tables">0</dd></div>
+            <div><dt>Service tables</dt><dd id="service-tables">0</dd></div>
+            <div><dt>Recommended chairs</dt><dd id="recommended-chairs">0</dd></div>
+            <div><dt>20-chair packs</dt><dd id="chair-packs">0</dd></div>
+          </dl>
+
+          <div class="results-breakdown">
+            <h3>Estimate breakdown</h3>
+            <div><span id="table-breakdown-label">Tables</span><strong id="table-cost">$0–$0</strong></div>
+            <div><span id="chair-breakdown-label">Chair packs</span><strong id="chair-cost">$0</strong></div>
+          </div>
+
+          <div class="estimate-note">
+            <strong>Planning estimate only</strong>
+            <p>Chair pricing uses Funfetti’s published $79 package of 20 as of June 2026. Table amounts use planning allowances because table rates are not currently published. Delivery, setup, taxes, availability, and event-specific needs are not included.</p>
+          </div>
+
+          <a id="quote-link" class="quote-button" href="mailto:Events@funfettievents.com">Request an Exact Quote</a>
+          <button id="reset-estimator" class="reset-button" type="button">Start Over</button>
+        </aside>
+        </section>
+      </section>
+
+      <section class="estimator-next-step">
+        <h2>Ready to See What’s Available?</h2>
+        <p>Browse the current rental collection or send your estimate to Funfetti for a personalized recommendation.</p>
+        <a href="https://funfettievents.booqableshop.com/" target="_blank" rel="noreferrer">Browse Rental Inventory</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="./index.html" aria-label="Funfetti Events home">
+            <img src="/assets/logo.png" alt="Funfetti Events" />
+          </a>
+          <div class="footer-socials" aria-label="Funfetti Events social media">
+            <a href="https://www.instagram.com/funfetti_eventsllc/" target="_blank" rel="noreferrer" aria-label="Follow Funfetti Events on Instagram"><img src="/assets/instagram-logo.png" alt="" aria-hidden="true" /></a>
+            <a href="https://www.tiktok.com/@funfetti_eventsllc" target="_blank" rel="noreferrer" aria-label="Follow Funfetti Events on TikTok"><img src="/assets/tiktok-logo.png" alt="" aria-hidden="true" /></a>
+          </div>
+        </div>
+        <nav class="footer-column" aria-label="Footer navigation">
+          <h2>Explore</h2>
+          <a href="./index.html#about">About</a>
+          <a href="./index.html#services">Services</a>
+          <a href="./estimator.html">Event Estimator</a>
+          <a href="./index.html#work">Gallery</a>
+          <a href="./index.html#contact">Contact</a>
+        </nav>
+        <div class="footer-column">
+          <h2>Services</h2>
+          <a href="https://funfettievents.booqableshop.com/" target="_blank" rel="noreferrer">Party Rentals</a>
+          <a href="./index.html#contact">Event Planning</a>
+          <a href="./index.html#contact">Photo Booth</a>
+        </div>
+        <div class="footer-column footer-contact">
+          <h2>Get In Touch</h2>
+          <a href="tel:18882733884">1 (888) 273-3884</a>
+          <a href="mailto:Events@funfettievents.com">Events@funfettievents.com</a>
+          <p>Monday–Friday<br />9:00 am–5:00 pm</p>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>Copyright © 2026 Funfetti Event Planning and Party Rentals. All Rights Reserved.</p></div>
+    </footer>
+
+    <script type="module" src="/estimator.js"></script>
+  </body>
+</html>
