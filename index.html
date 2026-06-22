@@ -19,8 +19,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <script type="module" crossorigin src="./assets/index-Kc98GxOt.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-DpU1Mffd.css">
+    <script type="module" crossorigin src="./assets/main-Ccisdd8g.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/styles-BqHbXxZE.js">
+    <link rel="stylesheet" crossorigin href="./assets/styles-BjwiWGKd.css">
   </head>
   <body>
     <div class="site-intro" role="dialog" aria-modal="true" aria-labelledby="intro-title">
@@ -30,11 +31,11 @@
       </video>
       <div class="site-intro-content">
         <h1 id="intro-title" aria-label="Make Your Next Event Unforgettable">
-          <span class="intro-word" style="--intro-delay: .5s">Make</span>
-          <span class="intro-word" style="--intro-delay: .7s">Your</span>
-          <span class="intro-word" style="--intro-delay: .9s">Next</span>
-          <span class="intro-word" style="--intro-delay: 1.1s">Event</span>
-          <span class="intro-word intro-word-accent" style="--intro-delay: 1.34s"><span>Unforgettable</span></span>
+          <span class="intro-word" style="--intro-delay: .18s">Make</span>
+          <span class="intro-word" style="--intro-delay: .32s">Your</span>
+          <span class="intro-word" style="--intro-delay: .46s">Next</span>
+          <span class="intro-word" style="--intro-delay: .6s">Event</span>
+          <span class="intro-word intro-word-accent" style="--intro-delay: .82s"><span>Unforgettable</span></span>
         </h1>
       </div>
       <button class="intro-skip" type="button">Skip intro</button>
@@ -48,20 +49,10 @@
         <span></span><span></span><span></span><span class="sr-only">Open menu</span>
       </button>
       <nav id="main-nav" class="main-nav" aria-label="Main navigation">
-        <div class="nav-dropdown">
-          <button class="nav-link nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="about-menu">
-            <span>About</span>
-            <svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.25 6 6.25l5-5" /></svg>
-            <span class="sr-only">Open About menu</span>
-          </button>
-          <div id="about-menu" class="nav-dropdown-menu">
-            <a href="#about">About Us</a>
-            <a href="#policies">Policies</a>
-            <a href="#faq">FAQ</a>
-          </div>
-        </div>
+        <a class="nav-link" href="#about">About</a>
         <a class="nav-link" href="#services">Services</a>
-        <a class="nav-link" href="#work">Work</a>
+        <a class="nav-link" href="./estimator.html">Estimator</a>
+        <a class="nav-link" href="#work">Gallery</a>
         <a class="nav-link" href="#contact">Contact</a>
         <a class="nav-link" href="https://funfettievents.booqableshop.com/" target="_blank" rel="noreferrer">Inventory</a>
       </nav>
@@ -95,7 +86,7 @@
             <img src="./assets/rentals-BD6JaBZW.png" alt="Colorful party rental setup" />
             <span>Explore Party Rentals</span>
           </a>
-          <a class="service-card" href="#contact">
+          <a class="service-card" href="./estimator.html">
             <img src="./assets/pricing-CDeKh0Cq.png" alt="Funfetti event planning services" />
             <span>Party &amp; Event Pricing</span>
           </a>
@@ -106,32 +97,14 @@
         </div>
       </section>
 
-      <section id="work" class="gallery section-wide" aria-labelledby="gallery-title">
-        <svg class="party-doodle doodle-burst doodle-gallery" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4v16M32 44v16M4 32h16M44 32h16M12 12l11 11M41 41l11 11M52 12 41 23M23 41 12 52" /></svg>
-        <h2 class="script-heading" id="gallery-title">Colorful Celebrations Gallery</h2>
-        <div class="gallery-grid">
-          <figure class="gallery-tall"><button class="gallery-open" type="button" aria-label="View elegant balloon and event backdrop"><img src="./assets/gallery-1-DuypZzYj.png" alt="Elegant balloon and event backdrop" /></button></figure>
-          <figure><button class="gallery-open" type="button" aria-label="View colorful celebration setup"><img src="./assets/gallery-2-Dc_WE2wv.png" alt="Colorful celebration setup" /></button></figure>
-          <figure><button class="gallery-open" type="button" aria-label="View party tables and balloon decorations"><img src="./assets/rentals-BD6JaBZW.png" alt="Party tables and balloon decorations" /></button></figure>
-          <figure><button class="gallery-open" type="button" aria-label="View pink party photo booth"><img src="./assets/photobooth-DC_w3-Mk.png" alt="Pink party photo booth" /></button></figure>
+      <section id="estimator-preview" class="estimator-teaser" aria-labelledby="estimator-teaser-title">
+        <div class="estimator-teaser-copy">
+          <h2 id="estimator-teaser-title">Not Sure What Your Event Needs?</h2>
+          <p>Get a quick planning estimate for guest tables, chairs, service tables, and an expected rental subtotal.</p>
         </div>
-      </section>
-
-      <section id="policies" class="info-band">
-        <svg class="party-doodle doodle-squiggle doodle-policies-left" viewBox="0 0 90 42" aria-hidden="true"><path d="M4 27c9-22 18 22 27 0s18 22 27 0 18 22 28 0" /></svg>
-        <svg class="party-doodle doodle-burst doodle-policies-right" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4v16M32 44v16M4 32h16M44 32h16M12 12l11 11M41 41l11 11M52 12 41 23M23 41 12 52" /></svg>
-        <h2>Funfetti Policies &amp; FAQs</h2>
-        <div class="info-columns">
-          <article>
-            <h3>Party Rental Policies</h3>
-            <p>Review the details that help every rental, delivery, and celebration run smoothly.</p>
-            <a class="button" href="#contact">See Details Before Booking</a>
-          </article>
-          <article id="faq">
-            <h3>FAQs for Fun Parties</h3>
-            <p>Find quick answers about booking, setup, rentals, service areas, and event timing.</p>
-            <a class="button" href="#contact">Get Answers</a>
-          </article>
+        <div class="estimator-teaser-action">
+          <p><strong>Bring your guest count.</strong><br />We’ll help with the setup math.</p>
+          <a class="estimator-button" href="./estimator.html">Plan Your Event</a>
         </div>
       </section>
 
@@ -169,6 +142,25 @@
           </div>
         </div>
       </section>
+
+      <section id="work" class="gallery" aria-label="Colorful celebrations gallery">
+        <div class="gallery-marquee">
+          <div class="gallery-track">
+            <div class="gallery-set">
+              <figure><button class="gallery-open" type="button" aria-label="View elegant balloon and event backdrop"><img src="./assets/gallery-1-DuypZzYj.png" alt="Elegant balloon and event backdrop" /></button></figure>
+              <figure><button class="gallery-open" type="button" aria-label="View colorful celebration setup"><img src="./assets/gallery-2-Dc_WE2wv.png" alt="Colorful celebration setup" /></button></figure>
+              <figure><button class="gallery-open" type="button" aria-label="View party tables and balloon decorations"><img src="./assets/rentals-BD6JaBZW.png" alt="Party tables and balloon decorations" /></button></figure>
+              <figure><button class="gallery-open" type="button" aria-label="View pink party photo booth"><img src="./assets/photobooth-DC_w3-Mk.png" alt="Pink party photo booth" /></button></figure>
+            </div>
+            <div class="gallery-set gallery-set-clone" aria-hidden="true">
+              <figure><img src="./assets/gallery-1-DuypZzYj.png" alt="" /></figure>
+              <figure><img src="./assets/gallery-2-Dc_WE2wv.png" alt="" /></figure>
+              <figure><img src="./assets/rentals-BD6JaBZW.png" alt="" /></figure>
+              <figure><img src="./assets/photobooth-DC_w3-Mk.png" alt="" /></figure>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <dialog class="lightbox" aria-label="Gallery image viewer">
@@ -187,15 +179,49 @@
       </button>
     </dialog>
 
-    <footer>
-      <p>Copyright © 2026 Funfetti Event Planning and Party Rentals. All Rights Reserved.</p>
-      <a href="#policies">Terms and Conditions</a>
-    </footer>
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" aria-label="Funfetti Events home">
+            <img src="./assets/logo-Cj2k_zg8.png" alt="Funfetti Events" />
+          </a>
+          <div class="footer-socials" aria-label="Funfetti Events social media">
+            <a href="https://www.instagram.com/funfetti_eventsllc/" target="_blank" rel="noreferrer" aria-label="Follow Funfetti Events on Instagram">
+              <img src="data:image/png;base64,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" alt="" aria-hidden="true" />
+            </a>
+            <a href="https://www.tiktok.com/@funfetti_eventsllc" target="_blank" rel="noreferrer" aria-label="Follow Funfetti Events on TikTok">
+              <img src="data:image/png;base64,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" alt="" aria-hidden="true" />
+            </a>
+          </div>
+        </div>
 
-    <aside class="cookie-banner" aria-label="Cookie notice">
-      <div><strong>This website uses cookies.</strong><p>We use cookies to analyze website traffic and optimize your website experience.</p></div>
-      <button type="button" class="cookie-accept">Accept</button>
-    </aside>
+        <nav class="footer-column" aria-label="Footer navigation">
+          <h2>Explore</h2>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="./estimator.html">Event Estimator</a>
+          <a href="#work">Gallery</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="footer-column">
+          <h2>Services</h2>
+          <a href="https://funfettievents.booqableshop.com/" target="_blank" rel="noreferrer">Party Rentals</a>
+          <a href="#contact">Event Planning</a>
+          <a href="#contact">Photo Booth</a>
+        </div>
+
+        <div class="footer-column footer-contact">
+          <h2>Get In Touch</h2>
+          <a href="tel:18882733884">1 (888) 273-3884</a>
+          <a href="mailto:Events@funfettievents.com">Events@funfettievents.com</a>
+          <p>Monday–Friday<br />9:00 am–5:00 pm</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Copyright © 2026 Funfetti Event Planning and Party Rentals. All Rights Reserved.</p>
+      </div>
+    </footer>
     </div>
   </body>
 </html>
