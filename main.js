@@ -11,6 +11,7 @@ let introTimer;
 let introTransitionTimer;
 
 const introIsActive = () => root.classList.contains('intro-pending') || root.classList.contains('intro-finishing');
+const introVideoIsVisible = () => siteIntroVideo && getComputedStyle(siteIntroVideo).display !== 'none';
 
 const markIntroSeen = () => {
   try {
@@ -24,9 +25,10 @@ const finishIntro = ({ focusHero = false, immediate = false } = {}) => {
   clearTimeout(introTimer);
   clearTimeout(introTransitionTimer);
   markIntroSeen();
-  siteIntroVideo.pause();
+  siteIntroVideo?.pause();
 
   const revealPage = () => {
+    root.classList.add('intro-complete');
     root.classList.remove('intro-pending', 'intro-finishing');
     siteContent.inert = false;
     siteIntro.setAttribute('aria-hidden', 'true');
@@ -43,14 +45,14 @@ const finishIntro = ({ focusHero = false, immediate = false } = {}) => {
 
   root.classList.remove('intro-pending');
   root.classList.add('intro-finishing');
-  introTransitionTimer = window.setTimeout(revealPage, 450);
+  introTransitionTimer = window.setTimeout(revealPage, 980);
 };
 
 if (root.classList.contains('intro-pending')) {
   siteContent.inert = true;
   siteIntro.removeAttribute('aria-hidden');
 
-  if (desktopIntro.matches) {
+  if (desktopIntro.matches && introVideoIsVisible()) {
     siteIntroVideo.currentTime = 0;
     siteIntroVideo.play().catch(() => {});
   }
@@ -58,7 +60,7 @@ if (root.classList.contains('intro-pending')) {
   introTimer = window.setTimeout(() => finishIntro(), 1900);
 } else {
   siteIntro.setAttribute('aria-hidden', 'true');
-  siteIntroVideo.pause();
+  siteIntroVideo?.pause();
 }
 
 introSkip.addEventListener('click', () => finishIntro({ focusHero: true }));
@@ -69,10 +71,10 @@ reducedMotion.addEventListener('change', (event) => {
 
 desktopIntro.addEventListener('change', (event) => {
   if (!introIsActive()) return;
-  if (event.matches) {
+  if (event.matches && introVideoIsVisible()) {
     siteIntroVideo.play().catch(() => {});
   } else {
-    siteIntroVideo.pause();
+    siteIntroVideo?.pause();
   }
 });
 
