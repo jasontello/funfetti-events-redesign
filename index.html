@@ -18,14 +18,14 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <script type="module" crossorigin src="./assets/main-Ccisdd8g.js"></script>
-    <link rel="modulepreload" crossorigin href="./assets/styles-BqHbXxZE.js">
-    <link rel="stylesheet" crossorigin href="./assets/styles-BjwiWGKd.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=Nunito+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script type="module" crossorigin src="./assets/main-CRtYDCxq.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/motion-CfXX44uB.js">
+    <link rel="stylesheet" crossorigin href="./assets/motion-P6_Xaqd-.css">
   </head>
   <body>
     <div class="site-intro" role="dialog" aria-modal="true" aria-labelledby="intro-title">
-      <video class="site-intro-video" poster="./assets/hero-illustration-v3-CvcQ_Up7.png" muted playsinline preload="auto" aria-hidden="true">
+      <video class="site-intro-video" poster="./assets/hero-illustration-party-scene-BcWfuggT.png" muted playsinline preload="none" aria-hidden="true">
         <source src="./assets/hero-intro-DbM7xrJQ.webm" type="video/webm" media="(min-width: 761px)" />
         <source src="./assets/hero-intro-D6IlHA2B.mp4" type="video/mp4" media="(min-width: 761px)" />
       </video>
@@ -43,18 +43,18 @@
 
     <header class="site-header">
       <a class="brand" href="#home" aria-label="Funfetti Events home">
-        <img src="./assets/logo-Cj2k_zg8.png" alt="Funfetti Events" />
+        <img src="./assets/logo-BaoeE-Ir.png" alt="Funfetti Events" />
       </a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
         <span></span><span></span><span></span><span class="sr-only">Open menu</span>
       </button>
       <nav id="main-nav" class="main-nav" aria-label="Main navigation">
-        <a class="nav-link" href="#about">About</a>
         <a class="nav-link" href="#services">Services</a>
-        <a class="nav-link" href="./estimator.html">Estimator</a>
+        <a class="nav-link" href="https://funfettievents.booqableshop.com/" target="_blank" rel="noreferrer">Browse Rentals</a>
         <a class="nav-link" href="#work">Gallery</a>
-        <a class="nav-link" href="#contact">Contact</a>
-        <a class="nav-link" href="https://funfettievents.booqableshop.com/" target="_blank" rel="noreferrer">Inventory</a>
+        <a class="nav-link" href="./estimator.html">Plan Event</a>
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link nav-link-cta" href="#quote" data-quote-modal data-label="Request Quote">Request Quote</a>
       </nav>
     </header>
 
@@ -62,83 +62,39 @@
     <main id="home">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-content">
-          <h1 id="hero-title" tabindex="-1" aria-label="Make Your Next Event Unforgettable">
-            <span class="hero-word" style="--word-delay: .12s">Make</span>
-            <span class="hero-word" style="--word-delay: .3s">Your</span>
-            <span class="hero-word" style="--word-delay: .48s">Next</span>
-            <span class="hero-word" style="--word-delay: .66s">Event</span>
-            <span class="hero-word hero-word-accent" style="--word-delay: .94s"><span>Unforgettable</span></span>
+          <h1 id="hero-title" class="hero-logo-title" tabindex="-1" aria-label="Funfetti Events">
+            <img class="hero-logo-art hero-word" src="./assets/logo-BaoeE-Ir.png" alt="" aria-hidden="true" style="--word-delay: .12s" />
           </h1>
+          <p class="hero-kicker">Event planning, party rentals, and photo booth experiences</p>
+          <div class="hero-actions" aria-label="Start planning your Funfetti event">
+            <a class="hero-button hero-button-primary" href="./estimator.html" data-label="Start Planning">Start Planning</a>
+          </div>
         </div>
       </section>
 
-      <section id="about" class="intro section-narrow">
-        <svg class="party-doodle doodle-burst doodle-about-left" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4v16M32 44v16M4 32h16M44 32h16M12 12l11 11M41 41l11 11M52 12 41 23M23 41 12 52" /></svg>
-        <svg class="party-doodle doodle-squiggle doodle-about-right" viewBox="0 0 90 42" aria-hidden="true"><path d="M4 27c9-22 18 22 27 0s18 22 27 0 18 22 28 0" /></svg>
-        <h2>Fun Celebrations Start Here</h2>
-        <p><strong>Funfetti Events</strong> is an event planning and party rental company providing reliable, affordable rentals throughout Fairfield, Vacaville, Vallejo, Suisun City, Benicia, Napa, and nearby Northern California areas. We help make every celebration stress-free and enjoyable.</p>
-      </section>
-
-      <section id="services" class="service-band" aria-label="Event services">
-        <svg class="party-doodle doodle-loop doodle-services" viewBox="0 0 74 64" aria-hidden="true"><path d="M10 48c-9-18 20-28 29-13 8 14-18 22-18 4 0-15 34-22 43 1" /></svg>
-        <div class="services">
-          <a class="service-card" href="https://funfettievents.booqableshop.com/" target="_blank" rel="noreferrer">
-            <img src="./assets/rentals-BD6JaBZW.png" alt="Colorful party rental setup" />
-            <span>Explore Party Rentals</span>
-          </a>
-          <a class="service-card" href="./estimator.html">
-            <img src="./assets/pricing-CDeKh0Cq.png" alt="Funfetti event planning services" />
-            <span>Party &amp; Event Pricing</span>
-          </a>
-          <a class="service-card" href="#contact">
-            <img src="./assets/photobooth-experience-CRLxrbzc.png" alt="Guests using a colorful interactive photo booth" />
-            <span>Photo Booth Experience</span>
-          </a>
-        </div>
-      </section>
-
-      <section id="estimator-preview" class="estimator-teaser" aria-labelledby="estimator-teaser-title">
-        <div class="estimator-teaser-copy">
-          <h2 id="estimator-teaser-title">Not Sure What Your Event Needs?</h2>
-          <p>Get a quick planning estimate for guest tables, chairs, service tables, and an expected rental subtotal.</p>
-        </div>
-        <div class="estimator-teaser-action">
-          <p><strong>Bring your guest count.</strong><br />We’ll help with the setup math.</p>
-          <a class="estimator-button" href="./estimator.html">Plan Your Event</a>
-        </div>
-      </section>
-
-      <section class="story section-wide">
+      <section id="about" class="story story-vision">
         <svg class="party-doodle doodle-loop doodle-story" viewBox="0 0 74 64" aria-hidden="true"><path d="M10 48c-9-18 20-28 29-13 8 14-18 22-18 4 0-15 34-22 43 1" /></svg>
-        <h2 class="script-heading">Why Funfetti?</h2>
         <div class="story-grid">
-          <div class="story-photo">
-            <img src="./assets/why-funfetti-family-BIKfbgJC.jpg" alt="The Funfetti Events family celebrating together" />
-          </div>
           <div class="story-copy">
-            <h3>Celebrations Crafted for Families</h3>
-            <p>As a family-owned business with years of event planning experience, <strong>Funfetti Event Planning and Party Rentals</strong> loves bringing celebrations to life. From backyard birthdays to big milestone moments, we’re here to take the stress out of planning and add a whole lot of fun. With reliable service, clean and stylish rentals, and a team that truly cares, we make it easy for you to relax, celebrate, and create unforgettable memories with the people you love.</p>
-            <a class="instagram-link" href="https://www.instagram.com/funfetti_eventsllc/" target="_blank" rel="noreferrer">Follow Funfetti on Instagram</a>
+            <h2>Why Funfetti?</h2>
+            <h3>Fun Celebrations Start Here</h3>
+            <p><strong>Funfetti Events</strong> is a family-owned event planning and party rental company providing reliable, affordable rentals throughout Fairfield, Vacaville, Vallejo, Suisun City, Benicia, Napa, and nearby Northern California areas.</p>
+            <p>From backyard birthdays to big milestone moments, we help take the stress out of planning with clean rentals, caring service, and celebrations that feel easy, joyful, and memorable.</p>
+            <div class="story-actions">
+              <a class="intro-button" href="#services" data-label="Explore services">Explore services</a>
+              <a class="instagram-link" href="https://www.instagram.com/funfetti_eventsllc/" target="_blank" rel="noreferrer">Follow Funfetti on Instagram</a>
+            </div>
           </div>
-        </div>
-      </section>
-
-      <section id="contact" class="contact section-wide">
-        <svg class="party-doodle doodle-burst doodle-contact-left" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4v16M32 44v16M4 32h16M44 32h16M12 12l11 11M41 41l11 11M52 12 41 23M23 41 12 52" /></svg>
-        <svg class="party-doodle doodle-squiggle doodle-contact-right" viewBox="0 0 90 42" aria-hidden="true"><path d="M4 27c9-22 18 22 27 0s18 22 27 0 18 22 28 0" /></svg>
-        <h2>Contact Us</h2>
-        <p class="contact-lead">Call or email us to plan your fun event!</p>
-        <div class="contact-grid">
-          <div>
-            <h3>Funfetti Event Planning and Party Rentals</h3>
-            <p><a href="tel:18882733884">1 (888) 273-3884</a></p>
-            <p><a href="mailto:Events@funfettievents.com">Events@funfettievents.com</a></p>
-          </div>
-          <div>
-            <h3>Business Hours</h3>
-            <p>Monday–Friday</p>
-            <p>9:00 am–5:00 pm</p>
-            <p>Saturday–Sunday: Closed</p>
+          <div class="story-visual" aria-hidden="true">
+            <figure class="story-photo story-photo-main">
+              <img src="./assets/why-funfetti-family-BIKfbgJC.jpg" alt="" />
+            </figure>
+            <figure class="story-photo story-photo-small story-photo-small-one">
+              <img src="./assets/gallery-2-Dc_WE2wv.png" alt="" />
+            </figure>
+            <figure class="story-photo story-photo-small story-photo-small-two">
+              <img src="./assets/photobooth-DC_w3-Mk.png" alt="" />
+            </figure>
           </div>
         </div>
       </section>
@@ -161,9 +117,27 @@
           </div>
         </div>
       </section>
+
+      <section id="services" class="service-band" aria-label="Event services">
+        <svg class="party-doodle doodle-loop doodle-services" viewBox="0 0 74 64" aria-hidden="true"><path d="M10 48c-9-18 20-28 29-13 8 14-18 22-18 4 0-15 34-22 43 1" /></svg>
+        <div class="services">
+          <a class="service-card" href="https://funfettievents.booqableshop.com/" target="_blank" rel="noreferrer">
+            <img src="./assets/rentals-BD6JaBZW.png" alt="Colorful party rental setup" />
+            <span>Explore Party Rentals</span>
+          </a>
+          <a class="service-card" href="https://funfettievents.com/party-%26-event-pricing-1" target="_blank" rel="noreferrer">
+            <img src="./assets/pricing-CDeKh0Cq.png" alt="Funfetti event planning services" />
+            <span>Party &amp; Event Pricing</span>
+          </a>
+          <a class="service-card" href="https://funfettievents.com/photo-booth" target="_blank" rel="noreferrer">
+            <img src="./assets/photobooth-experience-CRLxrbzc.png" alt="Guests using a colorful interactive photo booth" />
+            <span>Photo Booth Experience</span>
+          </a>
+        </div>
+      </section>
     </main>
 
-    <dialog class="lightbox" aria-label="Gallery image viewer">
+    <dialog class="lightbox" aria-label="Gallery image viewer" data-lenis-prevent>
       <button class="lightbox-close" type="button" aria-label="Close image viewer">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5 5 19" /></svg>
       </button>
@@ -179,11 +153,73 @@
       </button>
     </dialog>
 
+    <dialog id="quote-modal" class="quote-modal" aria-labelledby="quote-modal-title" data-lenis-prevent>
+      <button class="quote-modal-close" type="button" aria-label="Close quote request">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5 5 19" /></svg>
+      </button>
+      <div class="quote-modal-shell">
+        <aside class="quote-modal-intro">
+          <p class="quote-modal-eyebrow">Request Quote</p>
+          <h2 id="quote-modal-title">Contact</h2>
+          <div class="quote-modal-contact" aria-label="Funfetti Events contact details">
+            <p>Let’s Talk</p>
+            <a href="mailto:Events@funfettievents.com">Events@funfettievents.com</a>
+            <a href="tel:18882733884">1 (888) 273-3884</a>
+          </div>
+          <img class="quote-contact-art" src="./assets/contact-popup-people-DxJe3pmZ.png" alt="" aria-hidden="true" />
+        </aside>
+        <form class="quote-form">
+          <h3>Tell us about your event</h3>
+          <div class="quote-form-grid">
+            <label>
+              <span>Name</span>
+              <input name="name" type="text" autocomplete="name" required />
+            </label>
+            <label>
+              <span>Last Name</span>
+              <input name="lastName" type="text" autocomplete="family-name" />
+            </label>
+            <label>
+              <span>Email</span>
+              <input name="email" type="email" autocomplete="email" required />
+            </label>
+            <label>
+              <span>Phone Number</span>
+              <input name="phone" type="tel" autocomplete="tel" />
+            </label>
+            <label class="quote-form-wide">
+              <span>How did you hear about us?</span>
+              <select name="heard">
+                <option value="">Select one</option>
+                <option>Instagram</option>
+                <option>TikTok</option>
+                <option>Google search</option>
+                <option>Referral</option>
+                <option>Past event</option>
+                <option>Other</option>
+              </select>
+            </label>
+          </div>
+          <label class="quote-message-field">
+            <span>Message</span>
+            <textarea name="message" rows="5" placeholder="Event type, date, guest count, location, rentals, colors, theme, or anything you already know."></textarea>
+          </label>
+          <button class="quote-submit" type="submit" data-label="Send Request">Send Request</button>
+        </form>
+      </div>
+    </dialog>
+
     <footer class="site-footer">
+      <div class="footer-cta">
+        <p>Ready when you are</p>
+        <h2>Let’s make your next celebration feel easy.</h2>
+        <a href="#quote" data-quote-modal data-label="Request Quote">Request Quote</a>
+      </div>
+
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="#home" aria-label="Funfetti Events home">
-            <img src="./assets/logo-Cj2k_zg8.png" alt="Funfetti Events" />
+            <img src="./assets/logo-BaoeE-Ir.png" alt="Funfetti Events" />
           </a>
           <div class="footer-socials" aria-label="Funfetti Events social media">
             <a href="https://www.instagram.com/funfetti_eventsllc/" target="_blank" rel="noreferrer" aria-label="Follow Funfetti Events on Instagram">
@@ -197,18 +233,19 @@
 
         <nav class="footer-column" aria-label="Footer navigation">
           <h2>Explore</h2>
-          <a href="#about">About</a>
           <a href="#services">Services</a>
-          <a href="./estimator.html">Event Estimator</a>
+          <a href="https://funfettievents.booqableshop.com/" target="_blank" rel="noreferrer">Browse Rentals</a>
           <a href="#work">Gallery</a>
-          <a href="#contact">Contact</a>
+          <a href="./estimator.html">Plan Event</a>
+          <a href="#about">About</a>
+          <a href="#quote" data-quote-modal>Request Quote</a>
         </nav>
 
         <div class="footer-column">
           <h2>Services</h2>
           <a href="https://funfettievents.booqableshop.com/" target="_blank" rel="noreferrer">Party Rentals</a>
-          <a href="#contact">Event Planning</a>
-          <a href="#contact">Photo Booth</a>
+          <a href="#quote" data-quote-modal>Event Planning</a>
+          <a href="https://funfettievents.com/photo-booth" target="_blank" rel="noreferrer">Photo Booth</a>
         </div>
 
         <div class="footer-column footer-contact">
@@ -220,8 +257,12 @@
       </div>
       <div class="footer-bottom">
         <p>Copyright © 2026 Funfetti Event Planning and Party Rentals. All Rights Reserved.</p>
+        <a href="#home">Back to top</a>
       </div>
     </footer>
     </div>
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/lenis@1.3.25/dist/lenis.min.js"></script>
   </body>
 </html>
